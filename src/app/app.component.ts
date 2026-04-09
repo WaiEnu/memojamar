@@ -17,6 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   protected readonly title = signal('memojamar');
   content: string = '';
+  inturuderFlag = false;
   currentIntruder: Intruder | null = null;
 
   ngOnInit(): void {
@@ -26,9 +27,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private setIntruderCallback(intruder: Intruder):void {
     this.currentIntruder = intruder;
+    this.inturuderFlag = true;
   }
 
   saveText() {
+    this.memoService.save(this.content);
+  }
+
+  clearText() {
+    this.content = '';
     this.memoService.save(this.content);
   }
 
@@ -36,6 +43,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.content += `\n${this.currentIntruder?.intrudeText}`;
     this.memoService.save(this.content);
     this.currentIntruder = null;
+    this.inturuderFlag = false;
     this.intruderService.startTimer((intruder)=>this.setIntruderCallback(intruder));
   }
 
