@@ -11,7 +11,7 @@
       <div class="overlay" (click)="dismiss()">
         <div class="overlay-content">
           <p class="alert-text">{{ currentIntruder.alert }}</p>
-          <p class="image">{{ currentIntruder.emoji }}</p>
+          <p class="image"><img [(src)]="currentIntruder.src" [(alt)]="currentIntruder.emoji"/></p>
           <p class="message-text">{{ currentIntruder.message }}</p>
           <p class="dismiss-text">クリックして追い払う</p>
         </div>

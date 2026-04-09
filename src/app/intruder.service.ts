@@ -5,6 +5,7 @@ export interface Intruder {
   emoji: string;
   message: string;
   intrudeText: string;
+  src:string;
 }
 
 export interface IntruderInfo {
@@ -21,19 +22,22 @@ export class IntruderService {
       alert: '猫が侵入しました！',
       emoji: '🐱',
       message: '人類よ\n猫様に奉仕せよ',
-      intrudeText: 'にゃーん（猫様通過）'
+      intrudeText: 'にゃーん（猫様通過）',
+      src: '../asset/cat.png'
     },
     parakeet: {
       alert: 'インコが侵入しました！',
-      emoji: '🦜' ,
+      emoji: '🦜',
       message: 'マウスの代わりに\n握られるのを待っている',
-      intrudeText: 'ピピピ（インコが止まった）'
+      intrudeText: 'ピピピ（インコが止まった）',
+      src: '../asset/parakeet.png'
     },
     ninja: {
       alert: '忍者が侵入しました！',
       emoji: '🥷',
       message: '切り捨て御免',
-      intrudeText: '───ﾊﾞｻｯ（忍者が通り過ぎた）'
+      intrudeText: '───ﾊﾞｻｯ（忍者が通り過ぎた）',
+      src: '../asset/ninja.png'
     }
   }
 
