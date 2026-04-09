@@ -1,0 +1,56 @@
+/* Textarea styles */
+.memo{
+    width: 100%;
+    height: 75vh;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    border: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.8;
+    resize: none;
+    outline: none;
+}
+
+/* Overlay styles controlled by toggle flag */
+.overlay {
+    position: fixed;
+    inset:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+
+    .messsage-text {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    .dismiss-text {
+        font-size: 0.9rem;
+        color: #666;
+    }
+}

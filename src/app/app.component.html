@@ -1,0 +1,16 @@
+<main class="main">
+  <div class="content">
+    <div class="memo">
+      <textarea name="memo" placeholder="Enter your memo here..." [(ngModel)]="content" (input)="saveText()"></textarea>
+    </div>
+    @if(currentIntruder) {
+      <div class="overlay" (click)="dismiss()">
+        <div class="overlay-content">
+          <p>{{ currentIntruder.emoji }}</p>
+          <p class="messsage-text">{{ currentIntruder.message }}</p>
+          <p class="dismiss-text">クリックして追い払う</p>
+        </div>
+      </div>
+    }
+  </div>
+</main>
