@@ -1,6 +1,7 @@
 # Memojamar
 
 一定時間ごとに乱入者が現れ、作業を邪魔されるテキストエディタです。
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
 
 ## Development server
